@@ -91,51 +91,101 @@ The region changed to East US after this capture.
 
 ### 3.2 Deploy the Application
 
-#### 3.2.1 Connect and Apply
+#### 3.2.1 `az aks get-credentials`
 
-![Connect and Apply](screenshots/09_connect_and_apply.png)
+![az aks get-credentials](screenshots/09_get_credentials.png)
 
-#### 3.2.2 Pods, Services and Scale Up
+#### 3.2.2 `kubectl get nodes`
 
-![Pods, Services and Scale Up](screenshots/10_pods_services_scale_up.png)
+![kubectl get nodes](screenshots/10_get_nodes.png)
 
-#### 3.2.3 Services in the Portal
+#### 3.2.3 `kubectl apply`
 
-![Services in the Portal](screenshots/11_portal_services.png)
+![kubectl apply](screenshots/11_apply.png)
 
-#### 3.2.4 Store Front
+#### 3.2.4 `kubectl get pods`
 
-![Store Front](screenshots/12_store_front.jpg)
+![kubectl get pods](screenshots/12_get_pods.png)
 
-#### 3.2.5 Products
+#### 3.2.5 `kubectl get services`
 
-![Products](screenshots/13_products.png)
+![kubectl get services](screenshots/13_get_services.png)
 
-#### 3.2.6 RabbitMQ Overview
+#### 3.2.6 Services in the Portal
 
-![RabbitMQ Overview](screenshots/14_rabbitmq_overview.png)
+![Services in the Portal](screenshots/14_portal_services.png)
 
-#### 3.2.7 RabbitMQ Queue
+#### 3.2.7 Store Front
 
-![RabbitMQ Queue](screenshots/15_rabbitmq_queue.png)
+![Store Front](screenshots/15_store_front.jpg)
 
-#### 3.2.8 Self-healing and Logs
+#### 3.2.8 Products
 
-![Self-healing and Logs](screenshots/16_self_healing_and_logs.png)
+![Products](screenshots/16_products.png)
 
-#### 3.2.9 Scale Down
+#### 3.2.9 RabbitMQ Overview
 
-![Scale Down](screenshots/17_scale_down.png)
+![RabbitMQ Overview](screenshots/17_rabbitmq_overview.png)
 
-### 3.3 kubectl Cheat Sheet
+#### 3.2.10 RabbitMQ Queue
 
-#### 3.3.1 kubectl get all
+![RabbitMQ Queue](screenshots/18_rabbitmq_queue.png)
 
-![kubectl get all](screenshots/18_cheat_sheet_get_all.png)
+### 3.3 Explore Kubernetes
 
-#### 3.3.2 kubectl describe and top
+#### 3.3.1 `kubectl get pods -o wide`
 
-![kubectl describe and top](screenshots/19_cheat_sheet_describe_top.png)
+![kubectl get pods -o wide](screenshots/19_get_pods_wide.png)
+
+#### 3.3.2 `kubectl get pods --show-labels`
+
+![kubectl get pods --show-labels](screenshots/20_get_pods_labels.png)
+
+#### 3.3.3 `kubectl scale --replicas=3`
+
+![kubectl scale --replicas=3](screenshots/21_scale_up.png)
+
+#### 3.3.4 `kubectl rollout status`
+
+![kubectl rollout status](screenshots/22_rollout_up.png)
+
+#### 3.3.5 `kubectl get pods -l app=store-front -o wide`
+
+![kubectl get pods -l app=store-front -o wide](screenshots/23_store_front_pods_wide.png)
+
+#### 3.3.6 `kubectl get pods --watch`
+
+![kubectl get pods --watch](screenshots/24_watch.png)
+
+#### 3.3.7 `kubectl logs`
+
+![kubectl logs](screenshots/25_logs.png)
+
+#### 3.3.8 `kubectl scale --replicas=1`
+
+![kubectl scale --replicas=1](screenshots/26_scale_down.png)
+
+#### 3.3.9 `kubectl get pods -l app=store-front`
+
+![kubectl get pods -l app=store-front](screenshots/27_store_front_pods.png)
+
+#### 3.3.10 `kubectl rollout status`, after scaling down
+
+![kubectl rollout status, after scaling down](screenshots/28_rollout_down.png)
+
+### 3.4 kubectl Cheat Sheet
+
+#### 3.4.1 `kubectl get all`
+
+![kubectl get all](screenshots/29_get_all.png)
+
+#### 3.4.2 `kubectl describe svc`
+
+![kubectl describe svc](screenshots/30_describe_svc.png)
+
+#### 3.4.3 `kubectl top nodes`
+
+![kubectl top nodes](screenshots/31_top_nodes.png)
 
 ---
 
