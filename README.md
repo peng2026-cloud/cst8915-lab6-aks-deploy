@@ -53,85 +53,87 @@ The backend Services are `ClusterIP`, so they have no public address and are rea
 
 ## 3. Screenshots
 
-### Step 2: Create the AKS cluster
+### 3.1 Create the AKS Cluster
 
-Resource group, Canada Central:
+#### 3.1.1 Resource Group
 
-![Resource group](screenshots/01_resource_group.png)
+![Resource Group](screenshots/01_resource_group.png)
 
-Cluster Basics, top of the page, before the region changed to East US:
+#### 3.1.2 Cluster Basics, Top
 
-![Cluster Basics, top](screenshots/02_cluster_basics_top.png)
+The region changed to East US after this capture.
 
-Cluster Basics, bottom of the page, before the region changed to East US:
+![Cluster Basics, Top](screenshots/02_cluster_basics_top.png)
 
-![Cluster Basics, bottom](screenshots/03_cluster_basics_bottom.png)
+#### 3.1.3 Cluster Basics, Bottom
 
-D2as_v4 is not available to this subscription in Canada Central, so the cluster moved to East US:
+![Cluster Basics, Bottom](screenshots/03_cluster_basics_bottom.png)
 
-![D2as_v4 not available in Canada Central](screenshots/04_d2as_v4_not_available_canada_central.png)
+#### 3.1.4 D2as_v4 Not Available in Canada Central
 
-`masterpool`, System mode, 1 node of D2as_v4:
+![D2as_v4 Not Available in Canada Central](screenshots/04_d2as_v4_not_available_canada_central.png)
+
+#### 3.1.5 masterpool
 
 ![masterpool](screenshots/05_masterpool.png)
 
-`workerspool`, User mode, 1 node of D2as_v4:
+#### 3.1.6 workerspool
 
 ![workerspool](screenshots/06_workerspool.png)
 
-Review + create, region East US:
+#### 3.1.7 Review + Create
 
-![Review + create](screenshots/07_review_create.png)
+![Review + Create](screenshots/07_review_create.png)
 
-Deployment complete:
+#### 3.1.8 Deployment Complete
 
-![Deployment complete](screenshots/08_deployment_complete.png)
+![Deployment Complete](screenshots/08_deployment_complete.png)
 
-### Step 3: Deploy the application
+### 3.2 Deploy the Application
 
-Credentials, nodes and `kubectl apply`:
+#### 3.2.1 Connect and Apply
 
-![Connect and apply](screenshots/09_connect_and_apply.png)
+![Connect and Apply](screenshots/09_connect_and_apply.png)
 
-Services, Pods on their nodes (7A), and scaling to three replicas (7B):
+#### 3.2.2 Pods, Services and Scale Up
 
-![Pods, Services and scale up](screenshots/10_pods_services_scale_up.png)
+![Pods, Services and Scale Up](screenshots/10_pods_services_scale_up.png)
 
-Services and ingresses in the portal, with the external IP of `store-front`:
+#### 3.2.3 Services in the Portal
 
-![Services in the portal](screenshots/11_portal_services.png)
+![Services in the Portal](screenshots/11_portal_services.png)
 
-Store Front at the external IP:
+#### 3.2.4 Store Front
 
 ![Store Front](screenshots/12_store_front.jpg)
 
-Product Service through `/products` on the same IP:
+#### 3.2.5 Products
 
 ![Products](screenshots/13_products.png)
 
-RabbitMQ dashboard at `/rabbitmq/`, one queue and one message after the order:
+#### 3.2.6 RabbitMQ Overview
 
-![RabbitMQ overview](screenshots/14_rabbitmq_overview.png)
+![RabbitMQ Overview](screenshots/14_rabbitmq_overview.png)
 
-`order_queue` is durable (D) and holds the order:
+#### 3.2.7 RabbitMQ Queue
 
-![RabbitMQ queue](screenshots/15_rabbitmq_queue.png)
+![RabbitMQ Queue](screenshots/15_rabbitmq_queue.png)
 
-Deleting a Pod and its replacement (7C), then the logs (7D):
+#### 3.2.8 Self-healing and Logs
 
-![Self-healing and logs](screenshots/16_self_healing_and_logs.png)
+![Self-healing and Logs](screenshots/16_self_healing_and_logs.png)
 
-Back to one replica (7E):
+#### 3.2.9 Scale Down
 
-![Scale down](screenshots/17_scale_down.png)
+![Scale Down](screenshots/17_scale_down.png)
 
-### Lab Tasks: `kubectl` commands from the cheat sheet
+### 3.3 kubectl Cheat Sheet
 
-`kubectl get all`:
+#### 3.3.1 kubectl get all
 
 ![kubectl get all](screenshots/18_cheat_sheet_get_all.png)
 
-`kubectl describe svc store-front` and `kubectl top nodes`:
+#### 3.3.2 kubectl describe and top
 
 ![kubectl describe and top](screenshots/19_cheat_sheet_describe_top.png)
 
