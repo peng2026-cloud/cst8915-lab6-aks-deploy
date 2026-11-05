@@ -28,7 +28,7 @@ kubectl get pods -o wide
 kubectl get services
 ```
 
-Open the Store Front at `http://<EXTERNAL-IP>`, then open `http://<EXTERNAL-IP>/products`.
+Open the Store Front at `http://74.235.38.171`, then open `http://74.235.38.171/products`.
 
 Place an order on the website. A browser GET on `/orders` returns 404 because the Order Service accepts POST there, so the order is checked in the queue:
 
@@ -36,7 +36,7 @@ Place an order on the website. A browser GET on `/orders` returns 404 because th
 kubectl exec deployment/rabbitmq -- rabbitmqctl list_queues name durable messages
 ```
 
-Open `http://<EXTERNAL-IP>/rabbitmq/` and show `order_queue` under Queues and Streams.
+Open `http://74.235.38.171/rabbitmq/` and show `order_queue` under Queues and Streams.
 
 ## 2. Lab Tasks: Updating API Endpoints
 
