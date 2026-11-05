@@ -10,33 +10,55 @@
 
 ## 1. Demo Video
 
-The demo shows the deployed app on the AKS cluster, in this order.
-
-The cluster and its two node pools:
+### 1.1 Show the Nodes
 
 ```bash
 kubectl get nodes
 ```
 
-The four Pods and the Services, including the external IP of `store-front`:
+### 1.2 Show the Pods
 
 ```bash
 kubectl get pods -o wide
 ```
 
+### 1.3 Show the Services
+
+The `EXTERNAL-IP` of `store-front` is the address used in the next steps.
+
 ```bash
 kubectl get services
 ```
 
-Open the Store Front at `http://74.235.38.171`, then open `http://74.235.38.171/products`.
+### 1.4 Open the Store Front
 
-Place an order on the website. A browser GET on `/orders` returns 404 because the Order Service accepts POST there, so the order is checked in the queue:
+Open http://74.235.38.171 in the browser.
+
+### 1.5 Open the Products API
+
+Open http://74.235.38.171/products in the browser.
+
+### 1.6 Check the Queue Before the Order
 
 ```bash
 kubectl exec deployment/rabbitmq -- rabbitmqctl list_queues name durable messages
 ```
 
-Open `http://74.235.38.171/rabbitmq/` and show `order_queue` under Queues and Streams.
+### 1.7 Place an Order
+
+On the Store Front, select Cat Food, set the quantity to 2, and click Place Order. The order goes through `POST /orders`, so opening `/orders` in the browser returns 404.
+
+### 1.8 Check the Queue After the Order
+
+The message count increases by one.
+
+```bash
+kubectl exec deployment/rabbitmq -- rabbitmqctl list_queues name durable messages
+```
+
+### 1.9 Show the Queue in RabbitMQ
+
+Open http://74.235.38.171/rabbitmq/#/queues in the browser and log in with the credentials from the handout. `order_queue` shows the same message count.
 
 ## 2. Lab Tasks: Updating API Endpoints
 
