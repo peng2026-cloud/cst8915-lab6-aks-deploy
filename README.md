@@ -4,7 +4,7 @@
 |---|---|---|---|
 | Peng Wang | 041107730 | CST8915 Full-stack Cloud-native Development | Fall 2026 |
 
-🎥 [Watch Demo Video](VIDEO_LINK)
+🎥 [Watch Demo Video](https://www.youtube.com/watch?v=hcd7nRo3a_c)
 
 ---
 
@@ -46,7 +46,7 @@ kubectl exec deployment/rabbitmq -- rabbitmqctl list_queues name durable message
 
 ### 1.7 Place an Order
 
-On the Store Front, select Cat Food, set the quantity to 2, and click Place Order. The order goes through `POST /orders`, so opening `/orders` in the browser returns 404.
+On the Store Front, select Bird Seeds, set the quantity to 3, and click Place Order. The order goes through `POST /orders`, so opening `/orders` in the browser returns 404.
 
 ### 1.8 Check the Queue After the Order
 
