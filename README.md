@@ -153,39 +153,49 @@ The region changed to East US after this capture.
 
 ![kubectl get pods -l app=store-front -o wide](screenshots/23_store_front_pods_wide.png)
 
-#### 3.3.6 `kubectl get pods --watch`
+#### 3.3.6 `kubectl get service store-front`
 
-![kubectl get pods --watch](screenshots/24_watch.png)
+![kubectl get service store-front](screenshots/24_get_service.png)
 
-#### 3.3.7 `kubectl logs`
+#### 3.3.7 `kubectl get pods --watch`
 
-![kubectl logs](screenshots/25_logs.png)
+![kubectl get pods --watch](screenshots/25_watch.png)
 
-#### 3.3.8 `kubectl scale --replicas=1`
+#### 3.3.8 `kubectl delete pod`
 
-![kubectl scale --replicas=1](screenshots/26_scale_down.png)
+This capture repeats the delete on the remaining Pod; the watch above shows the first delete.
 
-#### 3.3.9 `kubectl get pods -l app=store-front`
+![kubectl delete pod](screenshots/26_delete_pod.png)
 
-![kubectl get pods -l app=store-front](screenshots/27_store_front_pods.png)
+#### 3.3.9 `kubectl logs`
 
-#### 3.3.10 `kubectl rollout status`, after scaling down
+![kubectl logs](screenshots/27_logs.png)
 
-![kubectl rollout status, after scaling down](screenshots/28_rollout_down.png)
+#### 3.3.10 `kubectl scale --replicas=1`
+
+![kubectl scale --replicas=1](screenshots/28_scale_down.png)
+
+#### 3.3.11 `kubectl get pods -l app=store-front`
+
+![kubectl get pods -l app=store-front](screenshots/29_store_front_pods.png)
+
+#### 3.3.12 `kubectl rollout status`, after scaling down
+
+![kubectl rollout status, after scaling down](screenshots/30_rollout_down.png)
 
 ### 3.4 kubectl Cheat Sheet
 
 #### 3.4.1 `kubectl get all`
 
-![kubectl get all](screenshots/29_get_all.png)
+![kubectl get all](screenshots/31_get_all.png)
 
 #### 3.4.2 `kubectl describe svc`
 
-![kubectl describe svc](screenshots/30_describe_svc.png)
+![kubectl describe svc](screenshots/32_describe_svc.png)
 
 #### 3.4.3 `kubectl top nodes`
 
-![kubectl top nodes](screenshots/31_top_nodes.png)
+![kubectl top nodes](screenshots/33_top_nodes.png)
 
 ---
 
